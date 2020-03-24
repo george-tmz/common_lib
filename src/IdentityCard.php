@@ -5,6 +5,7 @@
  * @author George
  * @date 2020/3/24
  * @time 16:10
+ * 认证身份证号码
  */
 class IdentityCard
 {
@@ -66,7 +67,8 @@ class IdentityCard
      * @param string $area 省、直辖市代码
      * @return bool
      */
-    private static function isAreaCodeValid(string $area) {
+    private static function isAreaCodeValid(string $area)
+    {
         $provinceCode = substr($area, 0, 2);
 
         // 根据GB/T2260—999，省市代码11到65
@@ -82,13 +84,14 @@ class IdentityCard
      * @param string $date 日期
      * @return bool
      */
-    private static function isDateValid(string $date) {
+    private static function isDateValid(string $date)
+    {
         if (strlen($date) == 6) { //15位身份证号没有年份，这里拼上年份
-            $date = '19'.$date;
+            $date = '19' . $date;
         }
-        $year  = intval(substr($date, 0, 4));
+        $year = intval(substr($date, 0, 4));
         $month = intval(substr($date, 4, 2));
-        $day   = intval(substr($date, 6, 2));
+        $day = intval(substr($date, 6, 2));
 
         //日期基本格式校验
         if (!checkdate($month, $day, $year)) {
@@ -116,13 +119,13 @@ class IdentityCard
 
             $checkSum = 0;
             for ($i = 0; $i < 17; $i++) {
-                $checkSum += intval($num{$i}) * $factor[$i];
+                $checkSum += intval($num[$i]) * $factor[$i];
             }
 
-            $mod   = $checkSum % 11;
+            $mod = $checkSum % 11;
             $token = $tokens[$mod];
 
-            $lastChar = strtoupper($num{17});
+            $lastChar = strtoupper($num[17]);
 
             if ($lastChar != $token) {
                 return false;
