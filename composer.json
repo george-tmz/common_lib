@@ -1,0 +1,19 @@
+{
+    "name": "george-t/common_lib",
+    "type": "library",
+    "authors": [
+        {
+            "name": "George",
+            "email": "jobsteng@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "georgeT\\common_lib\\": "src/"
+        }
+    },
+    "description": ""
+}
