@@ -1,5 +1,5 @@
 <?php
-
+namespace georgeT\CommonLib;
 /**
  * Class IdentityCard
  * @author George
