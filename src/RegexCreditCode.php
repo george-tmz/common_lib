@@ -1,6 +1,6 @@
 <?php
 
-namespace georgeT\common_lib;
+namespace georgeT\CommonLib;
 
 /**
  * Class RegexCreditCode
