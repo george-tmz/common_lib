@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "georgeT\\common_lib\\": "src/"
+            "georgeT\\CommonLib\\": "src/"
         }
     },
     "description": ""
