@@ -17,7 +17,7 @@ $bool = IdentityCard::isValid($idCardNo);
 var_dump($bool);
 ```
 
-营业执行号验证
+营业执照号验证
 
 ```
 <?php
