@@ -53,7 +53,7 @@ class RegexCreditCode
             $token = $tokens[31 - $mod];
         }
 
-        $lastChar = strtoupper($code[17]);
+        $lastChar = $code[17];
 
         if ($lastChar != $token) {
             return false;

@@ -16,5 +16,8 @@
             "georgeT\\CommonLib\\": "src/"
         }
     },
-    "description": ""
+    "description": "",
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
 }
