@@ -32,7 +32,7 @@ class IdentityCard
         } else if ($length == 18) { //如果是18位身份证
 
             //基本格式校验
-            if (!preg_match('/^\d{17}[0-9xX]$/', $num)) {
+            if (!preg_match('/^\d{17}[0-9X]$/', $num)) {
                 return false;
             }
             // 省市县（6位）
